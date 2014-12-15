@@ -26,7 +26,7 @@ def run():
     make_project(config_module)
 
 
-def make_project(config, do_hidden=False):
+def make_project(config, do_hidden=True):
     # General tree structure and setup.py
     make_tree_structure(config)
 
