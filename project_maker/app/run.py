@@ -9,10 +9,10 @@ from os.path import abspath, exists, join, split, splitext
 from importlib import import_module
 import shutil
 
-from setup_content import setup_content
-import license_notices
-from gitignore_content import std_gitignore_content
-import copyright_notices
+from project_maker.utils.setup_content import setup_content
+from project_maker.utils import license_notices
+from project_maker.utils.gitignore_content import std_gitignore_content
+from project_maker.utils import copyright_notices
 
 
 def run():
@@ -26,7 +26,7 @@ def run():
     make_project(config_module)
 
 
-def make_project(config, do_hidden=False):
+def make_project(config, do_hidden=True):
     # General tree structure and setup.py
     make_tree_structure(config)
 
@@ -38,7 +38,7 @@ def make_project(config, do_hidden=False):
         make_std_hidden_files(config)
 
 
-def make_tree_structure(config, overwrite=True):
+def make_tree_structure(config, overwrite=False):
     """
     """
     copyright_type = config.copyright_type
@@ -113,6 +113,7 @@ def create_readme_content(config):
     readme_content += config.project_name + "\n"
     readme_content += "=" * len(config.project_name) + "\n\n"
     readme_content += config.project_description + "\n\n"
+    readme_content += "Usage\n-----\n\n"
     readme_content += "Dependencies\n------------\n\n"
     readme_content += "Installation\n------------\n\n"
     readme_content += "Code structure\n--------------\n\n"
