@@ -11,14 +11,5 @@ obfuscated.
 
 Usage
 -----
-1. Copy the config.py and customize it,
+1. Copy the utils/config.py and customize it,
 2. Run `$ python project_maker.py my_customized_config.py`
-
-Dependencies
-------------
-
-Installation
-------------
-
-Code structure
---------------
