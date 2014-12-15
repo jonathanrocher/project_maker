@@ -8,7 +8,6 @@ current_year = now.year
 package_name = "default_project"
 project_name = "Default Enthought project"
 project_description = "Default Enthought project"
-author = "Enthought Inc."
 project_path = "."
 package_version = "0.1dev"
 
